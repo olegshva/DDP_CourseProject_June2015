@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Primitive interaction on WorldPhones dataset</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Primitive interaction on WorldPhones dataset">
+  <meta name="author" content="Oleg Shvaikovsky">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Primitive interaction on WorldPhones dataset</h1>
+    <h2>Developing Data Products, Course Project, 20th June 2015</h2>
+    <p>Oleg Shvaikovsky<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Description of WorldPhones dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>The number of telephones in various regions of the world (in thousands).</li>
+<li>Standard Dataset from </li>
+<li>Usage of Dataset  require call of: library(datasets)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Format of dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>A matrix with 7 rows and 8 columns. The columns of the matrix give the figures for a given region, and the rows the figures for a year.</li>
+<li>The regions are: North America, Europe, Asia, South America, Oceania, Africa, Central America.</li>
+<li>The years are: 1951, 1956, 1957, 1958, 1959, 1960, 1961.</li>
+<li>Source: AT&amp;T (1961) The World&#39;s Telephones.</li>
+</ol>
+
+<p>Chech your watches: 2015-06-20 15:48:26. The dataset is based on more then 60 years old data. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Example of Graphs on the Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">require(graphics)
+matplot(rownames(WorldPhones), WorldPhones, type = &quot;b&quot;, log = &quot;y&quot;, xlab = &quot;Year&quot;, ylab = &quot;Number of telephones (1000&#39;s)&quot;)
+legend(1951.5, 80000, colnames(WorldPhones), col = 1:6, lty = 1:5, pch = rep(21, 7))
+title(main = &quot;World phones: just example of plot for my CP&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Results of Course Project</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Major result of the Course project has to be to show that: </p>
+
+<ol>
+<li>I am able to create at least most primitive <strong>Shiny</strong> application (DONE!)</li>
+<li>I am able to publish the applications on <strong>shinyapps.io</strong> portal (DONE!)</li>
+<li>I am able to create presentation using both <em>Slidify</em> and <em>R Presenter</em> (DONE!)</li>
+<li>I am able to link accounts and to publish the presentation on <em>RPubs</em>_ (DONE!)</li>
+</ol>
+
+<p>I am sorry for the fact that the application itself is an extemelly primitive. It is because of the fact that I have focused on understanding how <em>Shiny</em> and <em>Slidify</em> are working.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Description of WorldPhones dataset'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Format of dataset'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example of Graphs on the Dataset'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Results of Course Project'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
